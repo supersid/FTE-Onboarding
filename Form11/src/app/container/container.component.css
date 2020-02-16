@@ -1,0 +1,45 @@
+.div1{
+    text-align: center;
+}
+.brmedium { 
+    display: block; 
+    margin-bottom: 1em; 
+}
+input{
+    background: transparent;
+    border: black;
+}
+div.pad{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+/* input[type="date"]:in-range::-webkit-datetime-edit-year-field, input[type="date"]:in-range::-webkit-datetime-edit-month-field, input[type="date"]:in-range::-webkit-datetime-edit-day-field, input[type="date"]:in-range::-webkit-datetime-edit-text { color: transparent; } */
+input[value="0000-00-00"]::-webkit-datetime-edit {
+    color: transparent; 
+}
+.sign{
+    /* float: right; */
+    padding-bottom: 50px;
+    padding-left: 800px ;
+}
+div.undertaking{
+    padding-left: 70px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+.line{
+    background: transparent;
+    border-bottom: 1px solid
+}
+.checkspace{
+    padding-left: 30px;
+}
+.sign2{
+    float: right;
+    /* padding-bottom: 50px;
+    padding-left: 800px ; */
+}
+.date-place{
+    padding-left: 70px;
+}
