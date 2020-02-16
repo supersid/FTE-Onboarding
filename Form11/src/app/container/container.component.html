@@ -1,0 +1,535 @@
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Undertaking</h4>
+      </div>
+      <div class="modal-body">
+        <p>1) Certified that the particulars are true to the best of my knowledge.
+          <br> 
+          2) I authorize EPFO to use Aadhar for a verification/authentication/eKYC purpose for service delivery.
+          <br>
+          3) Kindly transfer the funds and service details, if applicable, from the previous PF account as declared above to the present P.F. Account
+          <br>
+          (The transfer would be possible only if the identified KYC detail approved by previous employer has been verified by present employer <br>
+          using this Digital Signature Cetificate)
+          <br>
+          4) In case of changes in above details, the same will be intimated to employer at the earliest.
+        </p>
+        <form onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to Undertaking of the Provident Fund Form 11'); return false; }">
+          <input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agree to Undertaking of PF Form 11.
+          <span class="brmedium"></span>
+          <button type="submit" name="submit" class="btn btn-success">ACCEPT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class = 'div1'>
+  <h2>EMPLOYEES PROVIDENT FUND ORGANISATION</h2>
+  <h5>Employees Provident Fund Scheme, 1952(Paragraph 34 & 57)&</h5>
+  <span class = "brmedium"></span>
+  <h5>Employees Pension Scheme, 1995 (Paragraph 24)</h5>
+  <br>
+  <h4>(Declaration by a person taking up employement in any establishment on which EPF Schema, 1952 and /or EPS, 1995 is applicable)</h4>
+</div>
+<div class="pad">
+<form>
+  <!-- <div class="border border-dark"> -->
+    <table class="table table-bordered">
+      <tbody>
+        <tr>
+          <!-- <th scope="row">1</th> -->
+          <td>Name of the member</td>
+          <td><input type="text" placeholder="Enter Name"></td>
+        </tr>
+        <tr>
+          <!-- <th scope="row">2</th> -->
+          <td>Father's Name <input type = "checkbox" id = "fathername"><br>Spouse's Name <input type="checkbox" id = "spousename"><br>(Please tick whichever is applicable)</td>
+          <td><input type="text" placeholder="Enter Name"></td>
+        </tr>
+        <tr>
+          <!-- <th scope="row">3</th> -->
+          <td>Date of Birth: (DD/MM/YYYY)</td>
+          <td><input type="date"></td>
+        </tr>
+        <tr>
+          <!-- <th scope="row">4</th> -->
+          <td>Gender :</td>
+          <td>
+            <label for = "gender">Choose an Option</label>
+            <br>
+            <select id="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Transgender">Transgender</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row">5</th> -->
+          <td>Marital Status</td>
+          <td>
+            <label for = "marital_status">Choose an Option</label>
+            <br>
+            <select id="marital_status">
+              <option value="married">Married</option>
+              <option value="unmarried">Unmarried</option>
+              <option value="Widow">Widow</option>
+              <option value="widower">Widower</option>
+              <option value="divorce">Divorcee</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row">6</th> -->
+          <td>(a) Email ID :
+            <br>
+            (b) Mobile No. :
+          </td>
+          <td><input type="text" placeholder="Enter Email">
+            <br>
+            <input type="number" placeholder="Enter Number" maxlength="10" minlength="10">
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row">7</th> -->
+          <td>Whether earlier a member of Employee's Provident Fund Scheme, 1952</td>
+          <td>
+            <label for = "1952_Scheme">Choose an Option</label>
+            <br>
+            <select id = "1952_Scheme">
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row">8</th> -->
+          <td>Whether earlier a member of Employee's Provident Fund Scheme, 1955</td>
+          <td>
+            <label for = "1955_Scheme">Choose an Option</label>
+            <br>
+            <select id = "1955_Scheme">
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </td>
+        </tr>
+        <tr id="row9" style="display: none">
+          <!-- <th scope="row">9</th> -->
+          <td rowspan="5"> 
+            a) Universal Account Number:
+            <br>
+            b) Previous PF Account Number:
+            <br>
+            c) Date of exit from previous employement:
+            <br>
+            d) Scheme Certificate No, (if issued):
+            <br>
+            e) Pension Payment Order (PPO) No. (if issued):   
+          </td>
+          <td>
+            <input type="number" placeholder="Enter Number">
+            <br>
+            <input type="number" placeholder="PF Number">
+            <br>
+            <input type="Date">
+            <br>
+            <input type="number" placeholder="Enter Certificate Number" size="50">
+            <br>
+            <input type="number" placeholder="Enter PPO Number">
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row">10</th> -->
+          <td>International Worker</td>
+          <td>
+            <label for = "iw">Choose an Option</label>
+            <br>
+            <select id = "iw">
+              <option value="no">No</option>
+              <option value="yes">Yes</option>
+            </select>
+          </td>
+        </tr>
+        <tr id="row11" style="display: none">
+          <!-- <th scope="row">11</th> -->
+          <td rowspan="3"> 
+            a) If yes state country of origin(India/Name of other country):
+            <span class="brmedium"></span>
+            b) Passport Number:
+            <span class="brmedium"></span>
+            c) Validity of Passport [(DD/MM/YYYY) to (DD/MM/YYYY)]:   
+          </td>
+          <td>
+            <select id="country" name="country">
+              <option value="Afganistan">Afghanistan</option>
+              <option value="Albania">Albania</option>
+              <option value="Algeria">Algeria</option>
+              <option value="American Samoa">American Samoa</option>
+              <option value="Andorra">Andorra</option>
+              <option value="Angola">Angola</option>
+              <option value="Anguilla">Anguilla</option>
+              <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Armenia">Armenia</option>
+              <option value="Aruba">Aruba</option>
+              <option value="Australia">Australia</option>
+              <option value="Austria">Austria</option>
+              <option value="Azerbaijan">Azerbaijan</option>
+              <option value="Bahamas">Bahamas</option>
+              <option value="Bahrain">Bahrain</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Barbados">Barbados</option>
+              <option value="Belarus">Belarus</option>
+              <option value="Belgium">Belgium</option>
+              <option value="Belize">Belize</option>
+              <option value="Benin">Benin</option>
+              <option value="Bermuda">Bermuda</option>
+              <option value="Bhutan">Bhutan</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Bonaire">Bonaire</option>
+              <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+              <option value="Botswana">Botswana</option>
+              <option value="Brazil">Brazil</option>
+              <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+              <option value="Brunei">Brunei</option>
+              <option value="Bulgaria">Bulgaria</option>
+              <option value="Burkina Faso">Burkina Faso</option>
+              <option value="Burundi">Burundi</option>
+              <option value="Cambodia">Cambodia</option>
+              <option value="Cameroon">Cameroon</option>
+              <option value="Canada">Canada</option>
+              <option value="Canary Islands">Canary Islands</option>
+              <option value="Cape Verde">Cape Verde</option>
+              <option value="Cayman Islands">Cayman Islands</option>
+              <option value="Central African Republic">Central African Republic</option>
+              <option value="Chad">Chad</option>
+              <option value="Channel Islands">Channel Islands</option>
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>
+              <option value="Christmas Island">Christmas Island</option>
+              <option value="Cocos Island">Cocos Island</option>
+              <option value="Colombia">Colombia</option>
+              <option value="Comoros">Comoros</option>
+              <option value="Congo">Congo</option>
+              <option value="Cook Islands">Cook Islands</option>
+              <option value="Costa Rica">Costa Rica</option>
+              <option value="Cote DIvoire">Cote DIvoire</option>
+              <option value="Croatia">Croatia</option>
+              <option value="Cuba">Cuba</option>
+              <option value="Curaco">Curacao</option>
+              <option value="Cyprus">Cyprus</option>
+              <option value="Czech Republic">Czech Republic</option>
+              <option value="Denmark">Denmark</option>
+              <option value="Djibouti">Djibouti</option>
+              <option value="Dominica">Dominica</option>
+              <option value="Dominican Republic">Dominican Republic</option>
+              <option value="East Timor">East Timor</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Egypt">Egypt</option>
+              <option value="El Salvador">El Salvador</option>
+              <option value="Equatorial Guinea">Equatorial Guinea</option>
+              <option value="Eritrea">Eritrea</option>
+              <option value="Estonia">Estonia</option>
+              <option value="Ethiopia">Ethiopia</option>
+              <option value="Falkland Islands">Falkland Islands</option>
+              <option value="Faroe Islands">Faroe Islands</option>
+              <option value="Fiji">Fiji</option>
+              <option value="Finland">Finland</option>
+              <option value="France">France</option>
+              <option value="French Guiana">French Guiana</option>
+              <option value="French Polynesia">French Polynesia</option>
+              <option value="French Southern Ter">French Southern Ter</option>
+              <option value="Gabon">Gabon</option>
+              <option value="Gambia">Gambia</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Germany">Germany</option>
+              <option value="Ghana">Ghana</option>
+              <option value="Gibraltar">Gibraltar</option>
+              <option value="Great Britain">Great Britain</option>
+              <option value="Greece">Greece</option>
+              <option value="Greenland">Greenland</option>
+              <option value="Grenada">Grenada</option>
+              <option value="Guadeloupe">Guadeloupe</option>
+              <option value="Guam">Guam</option>
+              <option value="Guatemala">Guatemala</option>
+              <option value="Guinea">Guinea</option>
+              <option value="Guyana">Guyana</option>
+              <option value="Haiti">Haiti</option>
+              <option value="Hawaii">Hawaii</option>
+              <option value="Honduras">Honduras</option>
+              <option value="Hong Kong">Hong Kong</option>
+              <option value="Hungary">Hungary</option>
+              <option value="Iceland">Iceland</option>
+              <option value="Indonesia">Indonesia</option>
+              <option value="India">India</option>
+              <option value="Iran">Iran</option>
+              <option value="Iraq">Iraq</option>
+              <option value="Ireland">Ireland</option>
+              <option value="Isle of Man">Isle of Man</option>
+              <option value="Israel">Israel</option>
+              <option value="Italy">Italy</option>
+              <option value="Jamaica">Jamaica</option>
+              <option value="Japan">Japan</option>
+              <option value="Jordan">Jordan</option>
+              <option value="Kazakhstan">Kazakhstan</option>
+              <option value="Kenya">Kenya</option>
+              <option value="Kiribati">Kiribati</option>
+              <option value="Korea North">Korea North</option>
+              <option value="Korea Sout">Korea South</option>
+              <option value="Kuwait">Kuwait</option>
+              <option value="Kyrgyzstan">Kyrgyzstan</option>
+              <option value="Laos">Laos</option>
+              <option value="Latvia">Latvia</option>
+              <option value="Lebanon">Lebanon</option>
+              <option value="Lesotho">Lesotho</option>
+              <option value="Liberia">Liberia</option>
+              <option value="Libya">Libya</option>
+              <option value="Liechtenstein">Liechtenstein</option>
+              <option value="Lithuania">Lithuania</option>
+              <option value="Luxembourg">Luxembourg</option>
+              <option value="Macau">Macau</option>
+              <option value="Macedonia">Macedonia</option>
+              <option value="Madagascar">Madagascar</option>
+              <option value="Malaysia">Malaysia</option>
+              <option value="Malawi">Malawi</option>
+              <option value="Maldives">Maldives</option>
+              <option value="Mali">Mali</option>
+              <option value="Malta">Malta</option>
+              <option value="Marshall Islands">Marshall Islands</option>
+              <option value="Martinique">Martinique</option>
+              <option value="Mauritania">Mauritania</option>
+              <option value="Mauritius">Mauritius</option>
+              <option value="Mayotte">Mayotte</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Midway Islands">Midway Islands</option>
+              <option value="Moldova">Moldova</option>
+              <option value="Monaco">Monaco</option>
+              <option value="Mongolia">Mongolia</option>
+              <option value="Montserrat">Montserrat</option>
+              <option value="Morocco">Morocco</option>
+              <option value="Mozambique">Mozambique</option>
+              <option value="Myanmar">Myanmar</option>
+              <option value="Nambia">Nambia</option>
+              <option value="Nauru">Nauru</option>
+              <option value="Nepal">Nepal</option>
+              <option value="Netherland Antilles">Netherland Antilles</option>
+              <option value="Netherlands">Netherlands (Holland, Europe)</option>
+              <option value="Nevis">Nevis</option>
+              <option value="New Caledonia">New Caledonia</option>
+              <option value="New Zealand">New Zealand</option>
+              <option value="Nicaragua">Nicaragua</option>
+              <option value="Niger">Niger</option>
+              <option value="Nigeria">Nigeria</option>
+              <option value="Niue">Niue</option>
+              <option value="Norfolk Island">Norfolk Island</option>
+              <option value="Norway">Norway</option>
+              <option value="Oman">Oman</option>
+              <option value="Pakistan">Pakistan</option>
+              <option value="Palau Island">Palau Island</option>
+              <option value="Palestine">Palestine</option>
+              <option value="Panama">Panama</option>
+              <option value="Papua New Guinea">Papua New Guinea</option>
+              <option value="Paraguay">Paraguay</option>
+              <option value="Peru">Peru</option>
+              <option value="Phillipines">Philippines</option>
+              <option value="Pitcairn Island">Pitcairn Island</option>
+              <option value="Poland">Poland</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Puerto Rico">Puerto Rico</option>
+              <option value="Qatar">Qatar</option>
+              <option value="Republic of Montenegro">Republic of Montenegro</option>
+              <option value="Republic of Serbia">Republic of Serbia</option>
+              <option value="Reunion">Reunion</option>
+              <option value="Romania">Romania</option>
+              <option value="Russia">Russia</option>
+              <option value="Rwanda">Rwanda</option>
+              <option value="St Barthelemy">St Barthelemy</option>
+              <option value="St Eustatius">St Eustatius</option>
+              <option value="St Helena">St Helena</option>
+              <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+              <option value="St Lucia">St Lucia</option>
+              <option value="St Maarten">St Maarten</option>
+              <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+              <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+              <option value="Saipan">Saipan</option>
+              <option value="Samoa">Samoa</option>
+              <option value="Samoa American">Samoa American</option>
+              <option value="San Marino">San Marino</option>
+              <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+              <option value="Saudi Arabia">Saudi Arabia</option>
+              <option value="Senegal">Senegal</option>
+              <option value="Seychelles">Seychelles</option>
+              <option value="Sierra Leone">Sierra Leone</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Slovakia">Slovakia</option>
+              <option value="Slovenia">Slovenia</option>
+              <option value="Solomon Islands">Solomon Islands</option>
+              <option value="Somalia">Somalia</option>
+              <option value="South Africa">South Africa</option>
+              <option value="Spain">Spain</option>
+              <option value="Sri Lanka">Sri Lanka</option>
+              <option value="Sudan">Sudan</option>
+              <option value="Suriname">Suriname</option>
+              <option value="Swaziland">Swaziland</option>
+              <option value="Sweden">Sweden</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="Syria">Syria</option>
+              <option value="Tahiti">Tahiti</option>
+              <option value="Taiwan">Taiwan</option>
+              <option value="Tajikistan">Tajikistan</option>
+              <option value="Tanzania">Tanzania</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Togo">Togo</option>
+              <option value="Tokelau">Tokelau</option>
+              <option value="Tonga">Tonga</option>
+              <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+              <option value="Tunisia">Tunisia</option>
+              <option value="Turkey">Turkey</option>
+              <option value="Turkmenistan">Turkmenistan</option>
+              <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+              <option value="Tuvalu">Tuvalu</option>
+              <option value="Uganda">Uganda</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="United Arab Erimates">United Arab Emirates</option>
+              <option value="United States of America">United States of America</option>
+              <option value="Uraguay">Uruguay</option>
+              <option value="Uzbekistan">Uzbekistan</option>
+              <option value="Vanuatu">Vanuatu</option>
+              <option value="Vatican City State">Vatican City State</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Vietnam">Vietnam</option>
+              <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+              <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+              <option value="Wake Island">Wake Island</option>
+              <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+              <option value="Yemen">Yemen</option>
+              <option value="Zaire">Zaire</option>
+              <option value="Zambia">Zambia</option>
+              <option value="Zimbabwe">Zimbabwe</option>
+            </select>
+            <span class="brmedium"></span>
+            <input type="number" placeholder="Passport Number">
+            <span class="brmedium"></span>
+            <b>From:  </b>
+            <input type="Date">
+            <br>
+            <b>to  </b>
+            <input type="date">
+          </td>
+        </tr>
+        <tr>
+          <!-- <th scope="row">11</th> -->
+          <td> 
+            <b>KYC Details:</b> (attach self attested copies of following KYCs)
+            <span class="brmedium"></span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>a) Bank Account No. & IFS Code:</td>
+          <td><input type="file"></td>
+        </tr>
+        <tr>
+          <td> b) AADHAR Number:</td>
+          <td><input type="file"></td>
+        </tr>
+        <tr>
+          <td>c) Permanant Account Number (PAN), if available :   
+          </td>          
+          <td><input type="file"></td>
+        </tr>
+        <!-- <tr>
+            a) Bank Account No. & IFS Code:
+            <span class="brmedium"></span>
+            b) AADHAR Number:
+            <span class="brmedium"></span>
+            c) Permanant Account Number (PAN), if available :   
+          </td>
+          <td>
+            <span class="brmedium"></span>
+            Attach File<input type="file"> 
+            <span class="brmedium"></span>
+            Attach File<input type="file">
+            <span class="brmedium"></span>
+            Attach File<input type="file">
+            <br>
+            <h6></h6>
+          </td>
+        </tr>
+        <tr> -->
+      </tbody>
+    </table>
+  <!-- </div> -->
+</form>
+</div>
+<span class="div1">
+  <h3><b><u>UNDERTAKING</u></b></h3>
+</span>
+<div class="undertaking">
+  <p>1) Certified that the particulars are true to the best of my knowledge.
+    <br> 
+    2) I authorize EPFO to use Aadhar for a verification/authentication/eKYC purpose for service delivery.
+    <br>
+    3) Kindly transfer the funds and service details, if applicable, from the previous PF account as declared above to the present P.F. Account
+    <br>
+    (The transfer would be possible only if the identified KYC detail approved by previous employer has been verified by present employer <br>
+    using this Digital Signature Cetificate)
+    <br>
+    4) In case of changes in above details, the same will be intimated to employer at the earliest.
+  </p>
+</div>
+  <span class="brmedium"></span>
+  <div class = "date-place">
+DATE: <input type="text">
+<br>
+PLACE: <input type="text">
+<h6 class = "sign">Signature of the member</h6>
+</div>
+
+<!-- <div class="sign">
+  Signature of the Member
+</div> -->
+<div class="div1">
+  <h5><b><u>DECLARATION BY PRESENT EMPLOYER</u></b></h5>
+</div>
+<div class="undertaking">
+  <p>A. The Member of Mr/Ms/Mrs <input type="text" class="line"> has joined on <input type="text" class="line"> and has been allotted PF Number <input type="text" class="line">
+  <span class="brmedium">
+    B. In case the person wa earlier not a member of EPF Scheme, 1952 and EPS, 1995:
+    <span class="brmedium"></span>
+    <ul>
+      <li><b>(Post allotment of UAN)</b> The UAN allotted for the member is <input type="text" class="line"></li>
+      <span class="brmedium"></span>
+      <li><b>Please Tick the Appropriate Option</b></li>
+    </ul>
+    <div class="checkspace">
+<p>The KYC details of the above member in the UAN database</p>
+<span class="brmedium"></span>
+<input type="checkbox"> Have not been uploaded
+<br>
+<input type="checkbox"> Have been uploaded but not approved
+<br>
+<input type="checkbox"> Have been uploaded and approved with DSC
+</div>
+  <span class="brmedium"></span>
+  <p>C. In case the peron was earlier a member of EPF Scheme, 1952 and EPS, 1995:</p>
+  <ul>
+    <li>The above PF Account number/UAN of the member as mentioned in (A) above has been tagged with his/her UAN/Previous Member ID as declared by member.</li>
+    <li><b>Please Tick the Appropriate Option</b></li>
+  </ul>
+  <span class="brmedium"></span>
+  <div class="checkspace">
+  <input type="checkbox" >  The KYC details of the above member in the UAN database have been approved with Digital Signature Certificate and
+  <br>transfer request has been generated on portal.
+  <span class="brmedium"></span>
+    <input type="checkbox"> As the DSC of establishment are not registered with EPFO, the member has been informed to the file physical claim (Form-13) for transfer of the funds from his previous establishment.
+</div>
+<span class="brmedium"></span>
+Date <input type="text">
+<div class="sign2">
+  Signature of Employer with Seal of Establishment
+</div>
