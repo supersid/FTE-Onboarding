@@ -27,7 +27,7 @@
 </div> -->
 <div class="main-container">
     <div class="compiler">
-      <form>
+      <form (ngSubmit)="onSubmit()">
         <div style="text-align: center;">
           <h3>EMPLOYEES PROVIDENT FUND ORGANISATION</h3>
           <span style="display: block; margin-bottom: 1em; "></span>
@@ -40,7 +40,7 @@
     </div>
     <form  class="form-container">
       <label for="name">Name</label>
-      <input type="text" placeholder="Full Name">
+      <input type="text" placeholder="Full Name" id="fullname">
       <!-- <div class="error-msg" *ngIf="name.touched && !name.valid">*Field is Required</div> -->
       <label for="fname">Father's/Husband's Name (In Block Letters)</label>
       <input type="text" placeholder="Father's/Husband's Name" name="fname" required>
@@ -369,3 +369,6 @@
             <input type="file" id= "pan">
     </form>
   </div>
+  <a style="margin-left:700px;" 
+  routerLink="/pf-pdf" type="submit" class="btn btn-success">Save and Preview</a>
+  <!-- <a style="margin-left:700px" class="btn btn-success">Save and Preview</a> -->
