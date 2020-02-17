@@ -3,7 +3,7 @@
     text-align: center;
 }
 .size{
-    font-size: 9px;
+    font-size: 9.1px;
 }
 .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
     border: 1px solid black;
@@ -13,7 +13,7 @@ padding:2px;
 }
   table {
     border-collapse: collapse;
-    width: 90%;
+    width: 100%;
     margin-bottom: 10px;
     
   }
@@ -26,7 +26,7 @@ input{
     border: black;
 }
 .undertaking{
-    margin-left: 58px;
+    margin-left: 38px;
     margin-bottom: 2px;
 }
 /* input[type="date"]:in-range::-webkit-datetime-edit-year-field, input[type="date"]:in-range::-webkit-datetime-edit-month-field, input[type="date"]:in-range::-webkit-datetime-edit-day-field, input[type="date"]:in-range::-webkit-datetime-edit-text { color: transparent; } */
