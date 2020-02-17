@@ -38,7 +38,7 @@
         </div>
       </form>
     </div>
-    <form  class="form-container">
+    <form  class="form-container" #form11="ngForm">
       <label for="name">Name</label>
       <input type="text" placeholder="Full Name" id="fullname">
       <!-- <div class="error-msg" *ngIf="name.touched && !name.valid">*Field is Required</div> -->
@@ -67,19 +67,19 @@
             <input type="number" id="phone" name="phone" placeholder="Mobile Number" minlength="10">
             <!-- <div class="form-group"> -->
             <label for = "1952_Scheme">Whether earlier a member of Employee's Provident Fund Scheme, 1952</label>
-            <select id = "1952_Scheme">
-            <!-- <select class="form-control" id="1952_Scheme"[(ngModel)]="selectedValue" required> -->
+            <!-- <select id = "1952_Scheme" [(ngModel)] = "schemeValue"> -->
+             <select  id="1952_Scheme" name="1952_Scheme" [(ngModel)]="schemeValue1"> 
               <option value="no">No</option>
               <option value="yes">Yes</option>
             </select>
             <!-- </div> -->
             <label for = "1955_Scheme">Whether earlier a member of Employee's Provident Fund Scheme, 1955</label>
             <br>
-            <select id = "1955_Scheme">
+            <select name="1955_Scheme" id = "1955_Scheme" [(ngModel)]="schemeValue2">
               <option value="no">No</option>
               <option value="yes">Yes</option>
             </select>
-            <div id="row9" style="display: none">
+            <div *ngIf="schemeValue1 ==='yes'" id="row9">
             <label for = "uan">Universal Account Number:</label>
             <input type="number" placeholder="Enter Number" id= "uan">
             <label for = "previouspf">Previous PF Account Number:</label>
@@ -91,13 +91,25 @@
             <label for = "ppo">Pension Payment Order (PPO) No. (if issued):</label>
             <input type="number" placeholder="Enter Number" id= "ppo">
         </div>
+        <div *ngIf="schemeValue2 ==='yes'" id="row9">
+          <label for = "uan">Universal Account Number:</label>
+          <input type="number" placeholder="Enter Number" id= "uan">
+          <label for = "previouspf">Previous PF Account Number:</label>
+          <input type="number" placeholder="Enter Number" id= "previouspf">
+          <label for = "exitdate">Date of exit from previous employement:</label>
+          <input type="number" placeholder="Enter Number" id= "exitdate">
+          <label for = "schemeno">Scheme Certificate No, (if issued):</label>
+          <input type="number" placeholder="Enter Number" id= "schemeno">
+          <label for = "ppo">Pension Payment Order (PPO) No. (if issued):</label>
+          <input type="number" placeholder="Enter Number" id= "ppo">
+      </div>
         <label for = "iw">International Worker</label>
             <br>
-            <select id = "iw">
+            <select name="iw" id = "iw" [(ngModel)]="iwvalue">
               <option value="no">No</option>
               <option value="yes">Yes</option>
             </select>
-            <div id="row11" style="display: none">
+            <div id="row11" *ngIf="iwvalue ==='yes'">
                 <label for = "country">If yes state country of origin(India/Name of other country):</label>
                 <select id="country" name="country">
                     <option value="Afganistan">Afghanistan</option>
@@ -348,7 +360,7 @@
                     <option value="Zimbabwe">Zimbabwe</option>
                   </select>
                 <label for = "passport">Passport Number:</label>
-                <input type="number" placeholder="Enter Number" id= "passport">
+                <input type="text" placeholder="Enter Number" id= "passport">
                 <label for = "passportvalidity">Validity of Passport [(MM/DD/YYYY) to (MM/DD/YYYY)]:</label>
                 <div id="passportvalidity">
                     <label id="from">From</label>
@@ -359,14 +371,14 @@
             </div>
             <span class="brmedium"></span>
             <!-- <span class="glyphicon glyphicon-info-sign"></span> -->
-            <label><b>KYC Details:</b> (attach self attested copies of following KYCs)</label>
+            <label><b>KYC Details:</b> (attach self attested copies of following KYCs)</label><a data-toggle="popover" title="I authorize EPFO to use Aadhar for a verification/authentication/eKYC purpose for service delivery." class="glyphicon glyphicon-info-sign"></a>
             <span class="brmedium"></span>
             <label for = "ifscode">Bank Account No. & IFS Code:</label>
-            <input type="file" id= "ifscode">
+            <input type="text" id= "ifscode" placeholder="Enter Bank Account No. and IFS Code:"><input type="file" id= "ifscode">
             <label for = "aadharf">AADHAR Number:</label>
-            <input type="file"  id= "aadhar">
+            <input type="text" id= "aadhar" placeholder="Enter AADHAR Number"><input type="file"  id= "aadhar">
             <label for = "pan">Permanant Account Number (PAN), if available :</label>
-            <input type="file" id= "pan">
+            <input id= "pan" placeholder="Enter PAN Card Number"><input type="file" id= "pan">
     </form>
   </div>
   <a style="margin-left:700px;" 
