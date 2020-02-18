@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContainerComponent } from './container/container.component';
 import { UserForm11Component } from './user-form11/user-form11.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { UserForm11Component } from './user-form11/user-form11.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
    FormsModule
   ],
   providers: [],

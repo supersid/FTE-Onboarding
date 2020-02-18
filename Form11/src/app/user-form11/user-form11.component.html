@@ -27,7 +27,7 @@
 </div> -->
 <div class="main-container">
     <div class="compiler">
-      <form (ngSubmit)="onSubmit()">
+      <form (ngSubmit)="onSubmit()" #form11User="ngForm">
         <div style="text-align: center;">
           <h3>EMPLOYEES PROVIDENT FUND ORGANISATION</h3>
           <span style="display: block; margin-bottom: 1em; "></span>
@@ -68,44 +68,44 @@
             <!-- <div class="form-group"> -->
             <label for = "1952_Scheme">Whether earlier a member of Employee's Provident Fund Scheme, 1952</label>
             <!-- <select id = "1952_Scheme" [(ngModel)] = "schemeValue"> -->
-             <select  id="1952_Scheme" name="1952_Scheme" [(ngModel)]="schemeValue1"> 
+             <select  id="1952_Scheme" name="scheme_1952" [(ngModel)]="schemeValue1"> 
               <option value="no">No</option>
               <option value="yes">Yes</option>
             </select>
             <!-- </div> -->
             <label for = "1955_Scheme">Whether earlier a member of Employee's Provident Fund Scheme, 1955</label>
             <br>
-            <select name="1955_Scheme" id = "1955_Scheme" [(ngModel)]="schemeValue2">
+            <select name="scheme_1955" id = "1955_Scheme" [(ngModel)]="schemeValue2">
               <option value="no">No</option>
               <option value="yes">Yes</option>
             </select>
             <div *ngIf="schemeValue1 ==='yes'" id="row9">
             <label for = "uan">Universal Account Number:</label>
-            <input type="number" placeholder="Enter Number" id= "uan">
+            <input type="number" placeholder="Enter Number" id= "uan" name="uan">
             <label for = "previouspf">Previous PF Account Number:</label>
-            <input type="number" placeholder="Enter Number" id= "previouspf">
+            <input type="number" placeholder="Enter Number" id= "pf_number" name="pf_number">
             <label for = "exitdate">Date of exit from previous employement:</label>
-            <input type="number" placeholder="Enter Number" id= "exitdate">
+            <input type="number" placeholder="Enter Number" id= "exit_date_emp" name="exit_date_emp">
             <label for = "schemeno">Scheme Certificate No, (if issued):</label>
-            <input type="number" placeholder="Enter Number" id= "schemeno">
+            <input type="number" placeholder="Enter Number" id= "scheme_certificate_no" name="scheme_certificate_no">
             <label for = "ppo">Pension Payment Order (PPO) No. (if issued):</label>
-            <input type="number" placeholder="Enter Number" id= "ppo">
+            <input type="number" placeholder="Enter Number" id= "ppo" name="ppo">
         </div>
         <div *ngIf="schemeValue2 ==='yes'" id="row9">
           <label for = "uan">Universal Account Number:</label>
-          <input type="number" placeholder="Enter Number" id= "uan">
+          <input type="number" placeholder="Enter Number" id= "uan" name="uan">
           <label for = "previouspf">Previous PF Account Number:</label>
-          <input type="number" placeholder="Enter Number" id= "previouspf">
+          <input type="number" placeholder="Enter Number" id= "pf_number" name="pf_number">
           <label for = "exitdate">Date of exit from previous employement:</label>
-          <input type="number" placeholder="Enter Number" id= "exitdate">
+          <input type="number" placeholder="Enter Number" id= "exit_date_emp" name="exit_date_emp">
           <label for = "schemeno">Scheme Certificate No, (if issued):</label>
-          <input type="number" placeholder="Enter Number" id= "schemeno">
+          <input type="number" placeholder="Enter Number" id= "scheme_certificate_no" name="scheme_certificate_no">
           <label for = "ppo">Pension Payment Order (PPO) No. (if issued):</label>
-          <input type="number" placeholder="Enter Number" id= "ppo">
+          <input type="number" placeholder="Enter Number" id= "ppo" name="ppo">
       </div>
         <label for = "iw">International Worker</label>
             <br>
-            <select name="iw" id = "iw" [(ngModel)]="iwvalue">
+            <select name="int_worker" id = "int_worker" [(ngModel)]="iwvalue">
               <option value="no">No</option>
               <option value="yes">Yes</option>
             </select>
@@ -360,7 +360,7 @@
                     <option value="Zimbabwe">Zimbabwe</option>
                   </select>
                 <label for = "passport">Passport Number:</label>
-                <input type="text" placeholder="Enter Number" id= "passport">
+                <input type="text" placeholder="Enter Number" id= "passport_no" name="passport_no">
                 <label for = "passportvalidity">Validity of Passport [(MM/DD/YYYY) to (MM/DD/YYYY)]:</label>
                 <div id="passportvalidity">
                     <label id="from">From</label>
@@ -373,14 +373,46 @@
             <!-- <span class="glyphicon glyphicon-info-sign"></span> -->
             <label><b>KYC Details:</b> (attach self attested copies of following KYCs)</label><a data-toggle="popover" title="I authorize EPFO to use Aadhar for a verification/authentication/eKYC purpose for service delivery." class="glyphicon glyphicon-info-sign"></a>
             <span class="brmedium"></span>
-            <label for = "ifscode">Bank Account No. & IFS Code:</label>
-            <input type="text" id= "ifscode" placeholder="Enter Bank Account No. and IFS Code:"><input type="file" id= "ifscode">
+            <label for = "ifs_code">Bank Account No. & IFS Code:</label>
+            <input type="text" id= "ifs_code" placeholder="Enter Bank Account No. and IFS Code:" name="ifs_code"><input type="file" id= "ifscode" name="ifscode">
             <label for = "aadharf">AADHAR Number:</label>
             <input type="text" id= "aadhar" placeholder="Enter AADHAR Number"><input type="file"  id= "aadhar">
             <label for = "pan">Permanant Account Number (PAN), if available :</label>
             <input id= "pan" placeholder="Enter PAN Card Number"><input type="file" id= "pan">
-    </form>
+  
+    
+          </form>
   </div>
-  <a style="margin-left:700px;" 
-  routerLink="/pf-pdf" type="submit" class="btn btn-success">Save and Preview</a>
+
+          <!-- Trigger the modal with a button -->
+
+          <div class="save">
+          <button type="button" class="btn btn-success" (click)="showModel-true" data-toggle="modal" data-target="#myModal">Save and Preview</button>
+        </div>
+   
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog" [ngClass]="{'show':showModel}">
+            <div class="modal-dialog">
+            
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title"><b>Important  Instructions</b></h4>
+                </div>
+                <div class="modal-body">
+                  <p>1. Take a print of upcomming form with print button.<br> 
+                     2. Do your physical signature on it.<br>
+                     3. Upload it via upload button.<br>
+                  </p>
+                </div>
+                <div class="modal-footer" >
+                  <button type="button" routerLink="/pf-pdf" class="btn btn-default" data-dismiss="modal">Preview</button>
+         
+                </div>
+              </div>
+              
+            </div>
+          
+  <!-- <a routerLink="/pf-pdf" type="submit" class="btn btn-success">Save and Preview</a> -->
   <!-- <a style="margin-left:700px" class="btn btn-success">Save and Preview</a> -->
