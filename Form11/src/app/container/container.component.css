@@ -1,6 +1,22 @@
 .div1{
+    margin-top: 2px;
     text-align: center;
 }
+.size{
+    font-size: 9.1px;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid black;
+}
+td{
+padding:2px;
+}
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+    
+  }
 .brmedium { 
     display: block; 
     margin-bottom: 1em; 
@@ -9,40 +25,27 @@ input{
     background: transparent;
     border: black;
 }
-div.pad{
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 20px;
+.undertaking{
+    margin-left: 38px;
+    margin-bottom: 2px;
 }
 /* input[type="date"]:in-range::-webkit-datetime-edit-year-field, input[type="date"]:in-range::-webkit-datetime-edit-month-field, input[type="date"]:in-range::-webkit-datetime-edit-day-field, input[type="date"]:in-range::-webkit-datetime-edit-text { color: transparent; } */
 input[value="0000-00-00"]::-webkit-datetime-edit {
     color: transparent; 
 }
 .sign{
-    padding-bottom: 50px;
-    padding-left: 500px ;
+    float: right;
+    margin-right: 58px;
 }
-div.undertaking{
-    padding-left: 70px;
-    padding-right: 50px;
-    padding-bottom: 20px;
+.extramargin{
+    margin-left: 30px;
 }
 .line{
     background: transparent;
     border-bottom: 1px solid
 }
-.checkspace{
-    padding-left: 30px;
-}
-.sign2{
-    float: right;
-    padding-right: 50px;
-    /* padding-bottom: 50px;
-    padding-left: 800px ; */
-}
-.date-place{
-    padding-left: 70px;
-}
+
 @media print {
     .pagebreak { page-break-before: always; } /* page-break-after works, as well */
 }
+
