@@ -114,7 +114,17 @@ cursor: not-allowed;
 }
 .save{
   /* margin-left: 500px; */
-  text-align: center;
+  float: right;
   margin-bottom: 10px;
+}
+input:hover{
+border:2px solid green;
+}
+select:hover{
+  border:2px solid green;
+}
+#selectpadding{
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 

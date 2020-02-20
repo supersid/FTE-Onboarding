@@ -4,9 +4,9 @@ import { ContainerComponent } from './container/container.component';
 import { UserForm11Component } from '../app/user-form11/user-form11.component';
 
 const routes: Routes = [
-  {path:"",component:UserForm11Component},
-  {path: 'pf-pdf',component: ContainerComponent},
-  {path: 'pf',component:UserForm11Component}
+  {path:"pf",component:UserForm11Component},
+  {path: 'pf-pdf',component: ContainerComponent}
+  // {path: 'pf',component:UserForm11Component}
 ];
 
 @NgModule({

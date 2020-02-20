@@ -1,4 +1,9 @@
 export class Form11Table {
+    father_name:any;
+  Gender:any;
+  marital_status:any;
+  emailid:any;
+  contact:any;
     scheme_1952: any;
     scheme_1955: any;
     uan: any;
@@ -9,5 +14,8 @@ export class Form11Table {
     int_worker: any;
     country: any;
     passport_no: any;
-    ifs_code: any;
+    ifs_code:any;
+    ifscodefile: any;
+    aadharfile: any;
+    panfile: any;
 }

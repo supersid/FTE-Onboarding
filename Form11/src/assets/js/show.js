@@ -1,6 +1,8 @@
-$(document).ready(function(){
-    $("#myModal").modal('show');
-});
+
+
+// $(document).ready(function(){
+//     $("#myModal").modal('show');
+// });
 
 // $(document).ready(function () {
 //     //Attaching the change event of dropdown list
@@ -47,9 +49,9 @@ $(document).ready(function(){
 //     });
 // });
 
-function printFunction() {
-    window.print();
-  }
+// function printFunction() {
+//     window.print();
+//   }
 // $(document).ready(function(){
 //     $('[data-toggle="popover"]').popover();
 //   });
