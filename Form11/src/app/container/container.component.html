@@ -13,31 +13,31 @@
           <tr>
             <th scope="row">1</th>
             <td>Name of the member</td>
-            <td><input type="text" id="fullname"></td>
+            <td><input type="text" type="text" placeholder="Full Name" id="fullname" name="fullname" #fullname="ngModel" [(ngModel)]="task.full_name"></td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>Father's Name <input type="checkbox" id="fathername">&nbsp; Spouse's Name <input type="checkbox"
+            <td>Father's Name <input type="checkbox" id="father_name">&nbsp; Spouse's Name <input type="checkbox"
               id="spousename"><br>(Please tick whichever is applicable)</td>
-            <td><input type="text" id="fname"></td>
+            <td><input type="text" name="fathername" id="fathername" #fathername="ngModel" [(ngModel)]="task.father_name"></td>
           </tr>
           <tr>
             <th scope="row">3</th>
             <td>Date of Birth: (DD/MM/YYYY)</td>
-            <td><input type="text"></td>
+            <td><input type="text" name="dob" id="dob" #dob="ngModel" [(ngModel)]="task.Dob"></td>
           </tr>
           <tr>
             <th scope="row">4</th>
             <td>Gender :</td>
             <td>
-              <input type="text" id="gender">
+              <input type="text" id="gender" name="gender" #gender="ngModel" [(ngModel)]="task.Gender">
             </td>
           </tr>
           <tr>
             <th scope="row">5</th>
             <td>Marital Status</td>
             <td>
-              <input type="text" id="maritalstatus">
+              <input type="text" id="maritalstatus" name="maritalstatus" #maritalstatus="ngModel" [(ngModel)]="task.marital_status">
             </td>
           </tr>
           <tr>
@@ -46,23 +46,23 @@
               <br>
               (b) Mobile No. :
             </td>
-            <td><input type="text" id="email">
+            <td><input type="text" id="emailId" name="emailId" placeholder="Email ID" #emailId="ngModel" [(ngModel)]="task.emailid">
               <br>
-              <input type="number" id="phone" minlength="10">
+              <input type="number" id="contactNumber" name="contactNumber" placeholder="Mobile Number" minlength="10" #contactNumber="ngModel" [(ngModel)]="task.contact" minlength="10">
             </td>
           </tr>
           <tr>
             <th scope="row">7</th>
             <td>Whether earlier a member of Employee's Provident Fund Scheme, 1952</td>
             <td>
-              <input type="text" id="1952_Scheme">
+              <input type="text" id = "selectpadding" name="scheme_1952 " #task.scheme_1952="ngModel" [(ngModel)]="schemeValue1">
             </td>
           </tr>
           <tr>
             <th scope="row">8</th>
             <td>Whether earlier a member of Employee's Provident Fund Scheme, 1955</td>
             <td>
-              <input type="text" id="1955_Scheme">
+              <input type="text" id = "selectpadding" name="scheme_1955" #task.scheme_1955="ngModel" [(ngModel)]="schemeValue2">
             </td>
           </tr>
         <tr>
@@ -81,15 +81,15 @@
           </td>
           <td>
             <br>
-          <input type="number" id="uan">
+          <input type="number" id= "uan" name="uan" #uan="ngModel" [(ngModel)]="task.UAN">
           <br>
-          <input type="number" id="previouspf">
+          <input type="number" id= "pfnumber" name="pfnumber" #pfnumber="ngModel" [(ngModel)]="task.Pfnumber">
           <br>
-          <input type="number" id="exitdate">
+          <input type="number" id="exit_date_emp" name="exit_date_emp">
           <br>
-          <input type="number" id="schemeno">
+          <input type="number" id= "scheme_certificate_no" name="scheme_certificate_no"  #scheme_certificate_no="ngModel" [(ngModel)]="task.schemenumber">
           <br>
-          <input type="number" id="ppo">
+          <input type="number" id= "ppo" name="ppo"  #ppo="ngModel" [(ngModel)]="task.PPO">
         </td>
         </tr>
         <tr>
@@ -104,13 +104,13 @@
             d) Validity of Passport [(DD/MM/YYYY) to (DD/MM/YYYY)]:
           </td>
           <td>
-          <input type="text" id="iw">
+          <input type="text" id = "selectpadding" name="int_worker" #task.int_worker="ngModel" [(ngModel)]="iwvalue">
           <br>
-          <input type="text" id="country">
+          <input type="text" id="country" name="country" #country = "ngModel" [(ngModel)] = "Country">
           <br>
-          <input type="text" id="passport">
+          <input type="text" id= "passport_no" name="passport_no" #passport_no = "ngModel" [(ngModel)] = "task.passport">
           <br>
-          From: <input type="text" id="from">to: <input type="text" id="to">
+          From: <input type="text" id= "from" name="from" #from = "ngModel" [(ngModel)] = "task.fromdate">to: <input type="text" id= "to" name="to" #to = "ngModel" [(ngModel)] = "task.todate">
         </td>
         </tr>
         <tr>
@@ -126,11 +126,11 @@
           </td>
           <td>
           <br>
-          <input type="text" id= "ifscode">
+          <input type="text" id= "ifscode" name="ifscode" #ifscode = "ngModel" [(ngModel)] = "task.Ifscode">
           <br>
-          <input type="text" id= "aadhar">
+          <input type="text" id= "aadhar" name="aadhar" #aadhar = "ngModel" [(ngModel)] = "task.Aadhar">
           <br>
-          <input type="text" id= "pan">
+          <input type="text" id = "pan" name = "pan"#pan = "ngModel" [(ngModel)] = "task.Pan">
         </td>
         </tr>
         </tbody>
@@ -141,7 +141,7 @@
       <br>
     </div>
     <div class="undertaking">
-      1) Certified that the particulars are true to the best of my knowledge.
+        1) Certified that the particulars are true to the best of my knowledge.
         <br>
         2) I authorize EPFO to use Aadhar for a verification/authentication/eKYC purpose for service delivery.
         <br>
@@ -156,7 +156,7 @@
         <br>
         Date: <input type="text" id = "date">
         <br>
-        Place: <input type="text" name="" id="place">
+        Place: <input type="text" value="Gurugram" id="place">
         <div class="sign">
         Signature of Member
       </div>
@@ -200,9 +200,13 @@
         to the file physical claim (Form- <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13) for transfer of the funds from his previous establishment.
       </div>
       <br>
-      Date: <input type="text" id = "date">
+      Date: <input type="text" id = "declaration_date">
       <div class="sign">
-        Signature of Employer with Seal of Establishment    </div>
+        Signature of Employer with Seal of Establishment    
+      </div>
     </div>
   </div>
-</div>
+  <!-- <br> -->
+  <button type="button" routerLink="/pf" class="btn btn-success" id ="printbtn">Back</button>
+  <button id ="printbtn" class="btn btn-success print2" onclick="window.print();">Take a Print</button>
+<!-- </div> -->

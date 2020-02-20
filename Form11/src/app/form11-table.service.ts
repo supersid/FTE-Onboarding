@@ -7,17 +7,23 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class Form11TableService {
-  httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-  };
-
-  private tasksUrl = "http://localhost:8080";
-  constructor(private http: HttpClient) { }
-  public addTask(task): Observable<any> {
-    console.log(task.n_name);
-    const url=`${this.tasksUrl}/todo/api/updateData/1?`;
-    return this.http.put(url, task);
-  }
-
+ url='http://localhost:8080/todo';
+httpOptions={
+  headers:new HttpHeaders({'Content-Type':'application/json'})
+};
+  constructor(private _http:HttpClient) {
+ 
+   }
+ 
+public get_user_data(userId):Observable<any>
+{
+  return this._http.get(`${this.url}/api/get_formEleven_data?id=1`)
+}
+ 
+public saveEpsData(get):Observable<any>{
+  const url=`${this.url}/api/save_formEleven_data`
+  return this._http.post(url,get);
+}
+ 
 }
 
